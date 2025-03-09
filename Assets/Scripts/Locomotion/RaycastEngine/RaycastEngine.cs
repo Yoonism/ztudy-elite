@@ -67,6 +67,9 @@ namespace Elite.Locomotion
           [SerializeField]
           private float _jumpSpeedMin;
 
+          [SerializeField]
+          private bool _isGrounded;
+
           #endregion
 
           #region --------------- [ References ]
@@ -164,20 +167,20 @@ namespace Elite.Locomotion
           {
 
                Collider2D standingOn = _raycastGroundCheck.DoRaycast(transform.position);
-               bool grounded = standingOn != null;
-               if (grounded && _lastGrounded == false)
+               _isGrounded = standingOn != null;
+               if (_isGrounded && _lastGrounded == false)
                {
                     _jumpState = JumpState.None;
                     //landSFX.Play();
                }
-               _lastGrounded = grounded;
+               _lastGrounded = _isGrounded;
 
                #region --------------- [ CALC : Y velocity control ]
 
                switch (_jumpState)
                {
                     case JumpState.None:
-                         if (grounded && _jumpStartTimer > 0)
+                         if (_isGrounded && _jumpStartTimer > 0)
                          {
                               _jumpStartTimer = 0;
                               _jumpState = JumpState.Holding;
@@ -408,6 +411,11 @@ namespace Elite.Locomotion
           public bool GetLastGrounded()
           {
                return _lastGrounded;
+          }
+
+          public bool GetCurrentGrounded()
+          {
+               return _isGrounded;
           }
 
           #endregion

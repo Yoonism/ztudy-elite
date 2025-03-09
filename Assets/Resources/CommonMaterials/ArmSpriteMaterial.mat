@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9052459330696299178
+--- !u!114 &-8362800461016245388
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,12 +20,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ztudyLogoMaterial
+  m_Name: ArmSpriteMaterial
   m_Shader: {fileID: 4800000, guid: ba5a7d50c7b4eee4ba3018a27bff3161, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ENABLESTRONGTINT_ON
   - _SHADERFADING_NONE
   - _SHADERSPACE_UV
   - _TEXTURELAYER1SHEETTOGGLE_ON
@@ -87,7 +86,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0c127dc6e2c8cee4587de99a9f229b59, type: 3}
+        m_Texture: {fileID: 2800000, guid: 167d66c7ca84262478a25a28b7e521b2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetalMask:
@@ -307,7 +306,7 @@ Material:
     - _EnableSplitToning: 0
     - _EnableSqueeze: 0
     - _EnableSquish: 0
-    - _EnableStrongTint: 1
+    - _EnableStrongTint: 0
     - _EnableTextureLayer1: 0
     - _EnableTextureLayer2: 0
     - _EnableUVDistort: 0
@@ -476,7 +475,7 @@ Material:
     - _SmokeNoiseScale: 0.5
     - _SmokeSmoothness: 1
     - _SmokeVertexSeed: 0
-    - _Smoothness: 0.52
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SourceAlphaDissolveFade: 1
     - _SourceAlphaDissolveInvert: 0
@@ -690,7 +689,7 @@ Material:
     - _SpriteSheetRect: {r: 0, g: 0, b: 1, a: 1}
     - _SqueezeCenter: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _SqueezeScale: {r: 2, g: 0, b: 0, a: 0}
-    - _StrongTintTint: {r: 0, g: 0, b: 0, a: 1}
+    - _StrongTintTint: {r: 1, g: 1, b: 1, a: 1}
     - _TextureLayer1Color: {r: 0.4494117, g: 1.298301, b: 2.996079, a: 1}
     - _TextureLayer1Offset: {r: 0, g: 0, b: 0, a: 0}
     - _TextureLayer1Scale: {r: 1, g: 1, b: 0, a: 0}
